@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Bomberman HTML Game</title>
+  <meta charset="UTF-8">
+  <style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  canvas {
+    background: forestgreen;
+  }
+  </style>
+</head>
+<body>
+
+    <div class="rps-wrapper">
+        <ul id="events"></ul>
+        <h1 id="gameOver"></h1>
+        
+        <div class="button-wrapper">
+            <form id="chat-form">
+                <input id="chat" />
+                <button id="say">Say</button>
+            </form>
+            <br />
+            <!-- <button id="generate">Generate</button> -->
+
+        </div>
+
+        <canvas width="960" height="832" id="game"></canvas>
+        <script src = 'src/GenerateLevel.js'></script>
+        <script src = 'src/Player.js'></script>
+        <script src = 'src/Explosion.js'></script>
+        <script src = 'src/Bomb.js'></script>
+        <script src = 'src/PowerUps.js'></script>
+        <script src = 'src/Movement.js'></script> 
+        <script src = 'src/PlaceBomb.js'></script>
+        <script src = 'src/EndGame.js'></script>
+        <script src = 'src/Collisions.js'></script> 
+        <script src = 'src/ActivePlayers.js'></script> 
+        <script src = 'src/GameLoop.js'></script> 
+        <script src = 'src/StartGame.js'></script>  
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>        
+    <script src="src/client.js"></script>
+
+</body>
+</html>

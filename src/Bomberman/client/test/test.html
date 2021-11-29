@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mocha Test</title>
+  <meta charset="UTF-8">
+  <style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  canvas {
+    background: forestgreen;
+  }
+  </style>
+</head>
+<body>
+
+    <div class="rps-wrapper">
+        <ul id="events"></ul>
+        <h3 id="gameOver"></h3>
+        
+        <div class="button-wrapper">
+            <form id="chat-form">
+                <input id="chat" />
+                <button id="say">Say</button>
+            </form>
+            <br />
+            <!-- <button id="generate">Generate</button> -->
+            <h3>White</h3>
+            <button id="up">up</button>
+            <button id="down">down</button>
+            <button id="left">left</button>
+            <button id="right">right</button>
+
+            <h3>Red</h3>
+            <button id="up2">up</button>
+            <button id="down2">down</button>
+            <button id="left2">left</button>
+            <button id="right2">right</button>
+
+        </div>
+
+        <canvas width="960" height="832" id="game"></canvas>
+        <script src = "../node_modules/mocha/mocha.js"></script>
+        <script src = "../node_modules/chai/chai.js"></script>
+        <script src = '../../client/src/GenerateLevel.js'></script>
+        <script src = '../../client/src/Player.js'></script>
+        <script src = '../../client/src/Explosion.js'></script>
+        <script src = '../../client/src/Bomb.js'></script>
+        <script src = '../../client/src/PowerUps.js'></script>
+        <script src = '../../client/src/Movement.js'></script> 
+        <script src = '../../client/src/PlaceBomb.js'></script>
+        <script src = '../../client/src/EndGame.js'></script>
+        <script src = '../../client/src/Collisions.js'></script> 
+        <script src = '../../client/src/ActivePlayers.js'></script> 
+        <script src = '../../client/src/GameLoop.js'></script> 
+        <script src = '../../client/src/StartGame.js'></script>  
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>        
+    <script src="../../client/src/client.js"></script>
+    <script>mocha.run();</script> 
+
+</body>
+</html>

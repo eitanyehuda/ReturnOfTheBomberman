@@ -1,0 +1,115 @@
+\documentclass{article}
+
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{ulem}
+\usepackage{comment}
+\usepackage{soul}
+
+\title{SE 3XA3: Development Plan\\Bomberman 2: Return of the Bomberman}
+
+\author{Team \#18, REM
+		\\ Miles Jackson  jacksa7
+		\\ Eitan Yehuda  yehudae
+		\\ Ridhwan Chowdhury chowdr11
+}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+
+
+This document outlines the plan for developing, testing and reviewing the Bomberman 2
+project.
+
+\section{Team Meeting Plan}
+
+Meetings will take place every Tuesday and Thursday on the Discord channel during Lab hours.
+Informal meetings will occur on Wednesdays at 6:30PM on the same Discord channel, if needed. \\
+\linebreak 
+Meeting Guidelines:
+\begin{itemize}
+    \item All team members should contribute to the meeting.
+    \item Individual team member should miss no more than 2 group meetings, and should notify the group in advance.
+    \item Topics in the meeting should be held within a set time-frame.
+
+\end{itemize}
+
+
+\section{Team Communication Plan}
+
+Team members have given each other their academic emails, Discord usernames, and phone numbers so they can be reached in multiple different channels. All team members will have Maintainer access to a shared GitLab project.
+
+A team Discord group server has been set up as the main channel of communication. All group meetings will happen in the Discord server at the allotted time. Discord acts as the meeting base of the group used to discuss major project activities including new planned features, team member blockers halting progress, program issues that require attention, division of labour and deadlines.
+
+Academic emails will be used to inform the team about any rescheduling of group meeting. If a team member cannot attend a team meeting for whatever reason, they must email the team lead ahead of time. The team lead will email all team members a summary of major topics and updates discussed in the last team meeting
+
+Personal phone numbers will be used to contact a team member for urgent matters or if they are unreachable by other methods of communication. Calls and text will also be appropriate if a deadline is approaching or essential blockers need to be resolved.
+
+All team members have been given access to the project on GitLab. This ensures that all
+teammates will always have access to the most current and up to date source code. Supervising TA will also have access to the GitLab repository where updates will be pushed onto during different stages of the project.
+
+\section{Team Member Roles}
+
+Given a project of this size, all team members should be given roles based on their expertise
+to ensure everything runs smoothly. For this reason different roles were broken down into 2 overarching roles, and 4 main
+areas of expertise. The 2 overarching roles will be the Team Lead to make overall decisions about the project and to ensure
+all members stay on track, and the scribe write down and keep track of all decisions made by the group. As for the areas of expertise 
+being Documentation, Git, LaTeX and technology, the members will be in charge of decisions that happen within their given area.
+The team member breakdown is as follows:
+
+\begin{center}
+  \begin{tabular}{ |c|c| }
+    \hline
+    Eitan & Team Lead/Documentation \\
+    \hline
+    Miles & Scribe/Technology\\
+    \hline
+    Ridhwan & Git/LaTeX\\
+    \hline
+  \end{tabular}
+\end{center}
+
+
+
+\section{Git Workflow Plan}
+
+A GitHub Flow plan will be used for the development of this project. A centralized master branch will include the current most up-to-date version of the project, and branches will be made to test new changes and make improvements to the code. Given that the project is a web-based application there will only ever be one live version available to users. This means that the team will not need to support multiple versions of the application at the same time. Therefore having one master branch to store the live version with the ability to rollback if necessary will be more than sufficient. Labels can then be put to track changes made on the development and testing branches. Version notes will be added whenever the new changes are merged into the master branch.
+
+
+\section{Proof of Concept Demonstration Plan}
+
+For the project of creating and online bomber man game there are 3 main risks which must be overcome. The first will be implementing online lobbies so multiple players can play simultaneously. As a team none of the members have previously worked on a project that allows 2 or more users to simultaneously interact with the application while also seeing the other users actions in real time. For this reason it will most likely be the largest challenge for the implementation. To show this risk can be overcome the team will start by just creating a simple lobby that allows 2 users to simultaneously move around the board and see the other users moves.
+
+Another risk that must be addressed is testing the online lobbies. Automated testing can be used to ensure many functionalities of the application will perform as expected, but will not be able to be used in the online environment. Addressing this issue, the team will stress test the online lobbies manually. Stress testing enables the software to be put under heavy load conditions to ensure that the software does not crash on the user. This will be performed by using multiple computers and multiple tabs open joining the game and ensuring it functions correctly.
+
+The last risk that is to be considered is browser compatibility. Different browsers across different OS can often function differently and code that is supported and works on one does not allows work on another. To overcome this, the team is going to focus on the 3 main browsers, Google Chrome, Safari on MacOS, and Microsoft Edge. Getting the project and the lobbies functioning on all 3 of these browsers will show it has a large browser compatibility, and the implementation should work for most browsers.
+ 
+
+\section{Technology}
+
+
+The project will be written in JavaScript along with HTML/CSS. The IDE in which
+team members code the implementation will be according to their respective preferences. \st{Jest} \textcolor{red}{Mocha} will serve as the testing framework used to unit test, and provide maintenance for the game. This allows developers to test components in isolation and test basic user interaction. \st{Doxygen} \textcolor{red}{JSDoc} will be used to document the implementation to generate, and keep comments updated among developers. Additionally, Latex will be used in combination with \st{Doxygen} \textcolor{red}{JSDoc} to structure the files and manage internal references. \textcolor{red}{Heroku will be used to host the project online for users to easily access it given the link}
+
+\section{Coding Style}
+
+The project will be primarily implemented in JavaScript. The implementation of the project will be made to follow the Google JavaScript Style Guide. Using a consistent coding style is important throughout the project for maintaining the code as well easily understanding code written by another developer.  
+
+\section{Project Schedule}
+A link to the project schedule can be found in the project repository linked below:\\
+
+\href{https://gitlab.cas.mcmaster.ca/chowdr11/3xa3/-/tree/master/BlankProjectTemplate/ProjectSchedule}
+{\textbf{Gantt Chart}}\\
+
+\noindent This chart will be updated throughout the project
+
+\section{Project Review}
+Not Applicable 
+
+\end{document}
